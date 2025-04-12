@@ -8,12 +8,25 @@ Si necesitas especificar un host diferente, puedes configurarlo en el archivo vi
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-export default defineConfig({
-  plugins: [svelte()],
-  server: {
-    host: true, // Esto permite que el servidor escuche en 0.0.0.0
-    port: 5173,
-  },
+// https://vite.dev/config/
+export default defineConfig(({ command }) => {
+  const baseConfig = {
+    plugins: [svelte()]
+  }
+
+  if (command === 'serve') {
+    // Configuración solo para desarrollo
+    return {
+      ...baseConfig,
+      server: {
+        host: true,
+        port: 5173,
+      }
+    }
+  }
+
+  // Configuración para producción
+  return baseConfig
 })
 ```
 
@@ -29,3 +42,8 @@ bun run --bun vite
 ```
 
 Ve a android studio y ejecuta tu emulador en tu dispositivo fisico.
+
+```bash
+bunx cap run android -l --port=5173
+```
+
