@@ -32,3 +32,15 @@ https://capacitorjs.com/solution/svelte
 * __bun add @capacitor/assets__ : you can generate Splash Screens and Icons for your iOS, Android or Progressive Web Application.
 
 * __bunx capacitor-assets generate --android__ : it's used to generate and optimize the graphic resources (assets) needed for an Android app using Capacitor. This includes icons and splash screens in the sizes required by Android, based on your source images.
+
+# __Splash Screens and Icons__
+
+* __bunx add @capacitor/assets --save-dev__ : Provide icon and splash screen source images using this project/assets structure:.
+
+```bash 
+assets/
+├── icon.png
+```
+
+* __Setting the splash screen background color for Android 12+__
+https://github.com/ionic-team/capacitor-assets/issues/495#issuecomment-2110687090
