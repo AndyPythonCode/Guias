@@ -41,7 +41,8 @@ Aquí tienes ejemplos prácticos para varios comandos de la herramienta `uv`.
 ## `uv export`
 
 * **Descripción**: Exportar el archivo de bloqueo a otro formato.
-* **Ejemplo:** `uv export --output requirements.txt`
+* **Ejemplo:** `uv export --output-file requirements.txt`
+* **Ejemplo:** `uv export --no-hashes --output-file requirements.txt`
 * **Explicación:** Genera un archivo `requirements.txt` (formato estándar de pip) a partir del contenido del archivo `uv.lock`.
 
 ## `uv tree`
