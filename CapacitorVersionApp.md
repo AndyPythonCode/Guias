@@ -11,11 +11,12 @@ FILE> PROJECT STRUCTURE> MODULE> DEFAULT CONFIG> [VERSION NAME]
 
 ```gradle
     // APK name format
+    // Configure the name of the output APK file
     applicationVariants.all { variant ->
-    variant.outputs.all {
-        def versionName = variant.versionName
-        def formattedDate = new Date().format('dd-MM-YYYY')
-        outputFileName = "AndPlay_${formattedDate}_V_${versionName}.apk"
-    }
+    variant.outputs.all { output ->
+    def date = new Date().format('yyyy-MM-dd_HH-mm')
+    def versionName = defaultConfig.versionName
+    outputFileName = "AndPlay_${versionName}_${date}.apk"
+  }
 }
 ```
