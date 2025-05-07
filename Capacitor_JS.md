@@ -44,3 +44,24 @@ assets/
 
 * __Setting the splash screen background color for Android 12+__
 https://github.com/ionic-team/capacitor-assets/issues/495#issuecomment-2110687090
+
+# __Color NavegationBar for Android 12+__
+  
+```xml
+<!-- android\app\src\main\res\values-v31\styles.xml -->
+
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- CHANGE SPLASHSCREEN COLOR TO BLACK -->
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenBackground">#000000</item>
+    </style>
+
+    <!-- CHANGE NAVEGATIONBAR TO BLACK -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">#000000</item>
+    </style>
+
+</resources>
+
+```
