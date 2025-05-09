@@ -59,7 +59,7 @@ https://github.com/ionic-team/capacitor-assets/issues/495#issuecomment-211068709
 
     <!-- CHANGE NAVEGATIONBAR TO BLACK -->
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:navigationBarColor">#010101</item>
     </style>
 
 </resources>
